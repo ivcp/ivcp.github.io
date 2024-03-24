@@ -12,13 +12,12 @@
   padding: 0;
 }
 
-ul[role="list"],
-ol[role="list"] {
-  list-style: none;
-}
-
 a {
   text-decoration: none;
+}
+
+html {
+  overflow: scroll;
 }
 
 html:focus-within {
@@ -41,4 +40,147 @@ input,
 textarea,
 button {
   font: inherit;
+}
+
+.theme-btn {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.container {
+  display: flex;
+  gap: 10rem;
+  margin-inline: auto;
+  max-width: 80rem;
+  margin-top: 5rem;
+}
+
+.header {
+  max-width: 36rem;
+}
+
+.title {
+  line-height: 1.2;
+  font-weight: 400;
+  font-size: 2.5rem;
+}
+
+.name {
+  font-weight: 800;
+}
+
+.description {
+  margin-top: 1.875rem;
+  margin-bottom: 1.875rem;
+}
+
+.contact {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  width: 28.625rem;
+}
+
+[type="checkbox"] {
+  position: absolute;
+  left: -9999px;
+}
+
+.section-content {
+  visibility: hidden;
+  position: absolute;
+  max-height: 0;
+  opacity: 0;
+  display: flex;
+  gap: 1rem;
+  transition: max-height 0.6s ease-in-out, opacity 0.25s 0.1s;
+}
+.column {
+  flex-direction: column;
+}
+.skills-checkbox:checked ~ .section-content {
+  position: relative;
+  visibility: visible;
+  max-height: 50rem;
+  opacity: 1;
+}
+
+.arrow {
+  transform: rotate(0);
+  transition: 0.25s ease;
+}
+.skills-checkbox:checked ~ .section-title > div > .arrow {
+  transform: rotate(-180deg);
+}
+
+.projects-checkbox:checked ~ .section-content {
+  position: relative;
+  visibility: visible;
+  max-height: 50rem;
+  opacity: 1;
+}
+
+.projects-checkbox:checked ~ .section-title > div > .arrow {
+  transform: rotate(-180deg);
+}
+
+.section-title-container {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.skill-box {
+  background-color: gray;
+  border-radius: 4px;
+  width: 100%;
+  padding-block: 1rem;
+}
+
+.heading-small {
+  margin-left: 1.25rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+.heading-small--regular {
+  font-weight: normal;
+}
+.heading-small.project {
+  margin-bottom: 0;
+  line-height: 0.8;
+}
+.skill-list {
+  margin-left: 2.3rem;
+  line-height: 1.2;
+  font-size: 1rem;
+}
+
+.project-box {
+  background-color: gray;
+  border-radius: 4px;
+  padding-block: 1rem;
+}
+
+.project-link {
+  color: inherit;
+  font-size: 0.8rem;
+  margin-left: 1.25rem;
+}
+
+.project-text {
+  padding: 1.25rem;
+}
+
+.project-stack {
+  margin-left: 2.5rem;
 }

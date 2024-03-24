@@ -7,24 +7,154 @@
     <title>Ivan Perovic</title>
   </head>
   <body>
-    <section>
-      <h1>
-        Hello, I'm
-        <span style="color: orange; font-weight: bold">Ivan Perovic</span>
-      </h1>
-      <p>
-        I love creating web backends and frontends, and enjoy automating stuff.
-        On this portfolio website, you'll find a collection of my recent
-        projects that spotlight my capabilities as a full stack web developer.
-      </p>
-      <div>
-        <a href="http://github.com/ivcp" aria-label="github" target="_blank">
-          <img src="assets/mdi_github.svg" alt="github-logo" />
-        </a>
-        <a href="mailto:ivan.perovic@pm.me" aria-label="mail" target="_blank">
-          <img src="assets/material-symbols_mail-outline.svg" alt="mail-logo" />
-        </a>
-      </div>
-    </section>
+    <div class="theme-btn">theme</div>
+    <div class="container">
+      <header class="header">
+        <h1 class="title">
+          Hello,<br />
+          I'm <span class="name">Ivan Perovic</span>
+        </h1>
+        <p class="description">
+          I love creating web backends and frontends, and enjoy automating
+          stuff. On this portfolio website you'll find a collection of my recent
+          projects that spotlight my capabilities as a full stack web developer.
+        </p>
+        <div class="contact">
+          <a href="http://github.com/ivcp" aria-label="github" target="_blank">
+            <img src="assets/mdi_github.svg" alt="github-logo" />
+          </a>
+          <a href="mailto:ivan.perovic@pm.me" aria-label="mail" target="_blank">
+            <img
+              src="assets/material-symbols_mail-outline.svg"
+              alt="mail-logo"
+            />
+          </a>
+        </div>
+      </header>
+      <main class="main">
+        <section>
+          <input type="checkbox" id="skills" class="skills-checkbox" checked />
+          <label for="skills" class="section-title"
+            ><div class="section-title-container">
+              SKILLS
+              <img
+                class="arrow"
+                src="assets/mingcute_down-fill.svg"
+                alt="arrow"
+              /></div
+          ></label>
+          <div class="section-content">
+            <div class="skill-box">
+              <h4 class="heading-small">Backend</h4>
+              <ul class="skill-list">
+                <li>Go</li>
+                <li>Node</li>
+                <li>Python</li>
+                <li>PostgreSQL, MongoDB</li>
+                <li>Docker</li>
+              </ul>
+            </div>
+            <div class="skill-box">
+              <h4 class="heading-small">Frontend</h4>
+              <ul class="skill-list">
+                <li>JavaScript/TypeScript</li>
+                <li>HTML, CSS</li>
+                <li>React</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section>
+          <input
+            type="checkbox"
+            id="projects"
+            class="projects-checkbox"
+            checked
+          />
+          <label for="projects" class="section-title">
+            <div class="section-title-container">
+              PROJECTS
+              <img
+                src="assets/mingcute_down-fill.svg"
+                alt="arrow"
+                class="arrow"
+              /></div
+          ></label>
+
+          <div class="section-content column">
+            <div class="project-box">
+              <h4 class="heading-small project">
+                Polls
+                <span class="heading-small--regular">
+                  REST JSON API and React frontend</span
+                >
+              </h4>
+              <a
+                class="project-link"
+                href="https://github.com/ivcp/polls"
+                target="_blank"
+                >github.com/ivcp/polls</a
+              >
+              <p class="project-text">
+                A public JSON REST API that lets you create, view, edit, delete
+                and vote on polls. It implements IP based voting limitation.
+                Deployed to an AWS EC2 instance. I also made a React frontend.
+                You can try it out at <a href="https://polls.ovh">polls.ovh</a>
+              </p>
+              <ul class="project-stack">
+                <li>Backend: Go, Postgres, Docker, Caddy, AWS EC2</li>
+                <li>Frontend: React, Typescript, Vite, Mantine</li>
+              </ul>
+            </div>
+            <div class="project-box">
+              <h4 class="heading-small project">
+                Watchlist
+                <span class="heading-small--regular"> MERN stack web app</span>
+              </h4>
+              <a
+                class="project-link"
+                href="https://github.com/ivcp/movie-watchlist-mern"
+                target="_blank"
+                >github.com/ivcp/movie-watchlist-mern</a
+              >
+              <p class="project-text">
+                A full stack app where users can discover movies, add them to
+                their list, mark as watched, rate. Backend deployed on Render,
+                Frontend on Netlify:
+                <a href="https://vvatchlist.netlify.app/"
+                  >vvatchlist.netlify.app</a
+                >
+              </p>
+              <ul class="project-stack">
+                <li>Backend: Node, Express, MongoDB</li>
+                <li>Frontend: Vite, React, CSS modules</li>
+              </ul>
+            </div>
+            <div class="project-box">
+              <h4 class="heading-small project">
+                Food and wine pairing
+                <span class="heading-small--regular"> React app</span>
+              </h4>
+              <a
+                class="project-link"
+                href="https://github.com/ivcp/wine-pairing"
+                target="_blank"
+                >github.com/ivcp/wine-pairing</a
+              >
+              <p class="project-text">
+                A single page app that helps users find food and wine pairings.
+                Site url:
+                <a href="https://food-and-wine.netlify.app/"
+                  >food-and-wine.netlify.app</a
+                >
+              </p>
+              <ul class="project-stack">
+                <li>React, CSS modules, Netlify, Spoonacular API</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
   </body>
 </html>
