@@ -1,3 +1,44 @@
-h1 {
-  color: rebeccapurple;
+@font-face {
+  font-family: "Ubuntu Mono", monospace;
+  src: url("assets/Ubuntu_Mono/UbuntuMono-Regular.tff") format("truetype"),
+    url("assets/Ubuntu_Mono/UbuntuMono-Bold.tff") format("truetype");
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Ubuntu Mono", monospace;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+textarea,
+button {
+  font: inherit;
 }
