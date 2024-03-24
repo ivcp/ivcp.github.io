@@ -33,16 +33,24 @@
       </header>
       <main class="main">
         <section>
-          <input type="checkbox" id="skills" class="skills-checkbox" checked />
+          <input
+            type="radio"
+            name="section"
+            id="skills"
+            class="skills-checkbox"
+            checked
+          />
           <label for="skills" class="section-title"
             ><div class="section-title-container">
-              SKILLS
-              <img
+              <span>SKILLS</span>
+              <!-- <img
                 class="arrow"
                 src="assets/mingcute_down-fill.svg"
                 alt="arrow"
-              /></div
-          ></label>
+              /></div -->
+              <div class="section-circle"></div>
+            </div>
+          </label>
           <div class="section-content">
             <div class="skill-box">
               <h4 class="heading-small">Backend</h4>
@@ -66,20 +74,22 @@
         </section>
         <section>
           <input
-            type="checkbox"
+            type="radio"
+            name="section"
             id="projects"
             class="projects-checkbox"
-            checked
           />
           <label for="projects" class="section-title">
             <div class="section-title-container">
-              PROJECTS
-              <img
+              <span>PROJECTS</span>
+              <!-- <img
                 src="assets/mingcute_down-fill.svg"
                 alt="arrow"
                 class="arrow"
-              /></div
-          ></label>
+              /> -->
+              <div class="section-circle"></div>
+            </div>
+          </label>
 
           <div class="section-content column">
             <div class="project-box">

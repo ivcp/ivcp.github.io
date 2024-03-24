@@ -83,9 +83,10 @@ button {
 
 .main {
   width: 28.625rem;
+  margin-bottom: 2rem;
 }
 
-[type="checkbox"] {
+[type="radio"] {
   position: absolute;
   left: -9999px;
 }
@@ -113,24 +114,45 @@ button {
   transform: rotate(0);
   transition: 0.25s ease;
 }
-.skills-checkbox:checked ~ .section-title > div > .arrow {
-  transform: rotate(-180deg);
+
+.section-circle {
+  height: 1.2rem;
+  width: 1.2rem;
+  border: 2px solid gray;
+  border-radius: 50%;
+  transition: background-color 0.2s;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 0 -2px gray;
+  }
+  to {
+    box-shadow: 0 0 0 2px gray;
+  }
+}
+
+.skills-checkbox:checked ~ .section-title > div > .section-circle {
+  background-color: gray;
+  animation: glow 0.5s;
 }
 
 .projects-checkbox:checked ~ .section-content {
   position: relative;
   visibility: visible;
-  max-height: 50rem;
+  max-height: 100rem;
   opacity: 1;
 }
 
-.projects-checkbox:checked ~ .section-title > div > .arrow {
-  transform: rotate(-180deg);
+.projects-checkbox:checked ~ .section-title > div > .section-circle {
+  background-color: gray;
+  animation: glow 0.5s;
 }
 
 .section-title-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   cursor: pointer;
 }
 
