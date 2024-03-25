@@ -4,10 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script defer src="index.js"></script>
     <title>Ivan Perovic</title>
   </head>
-  <body>
-    <div class="theme-btn">theme</div>
+  <body class="theme1">
+    <nav class="nav">
+      <button class="theme-btn">
+        <span class="sr-only">themes</span>
+      </button>
+    </nav>
     <div class="container">
       <header class="header">
         <h1 class="title">
@@ -17,17 +22,36 @@
         <p class="description">
           I love creating web backends and frontends, and enjoy automating
           stuff. On this portfolio website you'll find a collection of my recent
-          projects that spotlight my capabilities as a full stack web developer.
+          projects that demonstrate my skills as a full stack web developer.
         </p>
         <div class="contact">
           <a href="http://github.com/ivcp" aria-label="github" target="_blank">
-            <img src="assets/mdi_github.svg" alt="github-logo" />
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 40 40"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19.9999 3.33334C17.8112 3.33334 15.644 3.76444 13.6219 4.60202C11.5998 5.4396 9.76245 6.66725 8.21481 8.2149C5.0892 11.3405 3.33325 15.5797 3.33325 20C3.33325 27.3667 8.11659 33.6167 14.7333 35.8333C15.5666 35.9667 15.8333 35.45 15.8333 35V32.1833C11.2166 33.1833 10.2333 29.95 10.2333 29.95C9.46658 28.0167 8.38325 27.5 8.38325 27.5C6.86659 26.4667 8.49992 26.5 8.49992 26.5C10.1666 26.6167 11.0499 28.2167 11.0499 28.2167C12.4999 30.75 14.9499 30 15.8999 29.6C16.0499 28.5167 16.4833 27.7833 16.9499 27.3667C13.2499 26.95 9.36658 25.5167 9.36658 19.1667C9.36658 17.3167 9.99992 15.8333 11.0833 14.65C10.9166 14.2333 10.3333 12.5 11.2499 10.25C11.2499 10.25 12.6499 9.80001 15.8333 11.95C17.1499 11.5833 18.5833 11.4 19.9999 11.4C21.4166 11.4 22.8499 11.5833 24.1666 11.95C27.3499 9.80001 28.7499 10.25 28.7499 10.25C29.6666 12.5 29.0833 14.2333 28.9166 14.65C29.9999 15.8333 30.6332 17.3167 30.6332 19.1667C30.6332 25.5333 26.7333 26.9333 23.0166 27.35C23.6166 27.8667 24.1666 28.8833 24.1666 30.4333V35C24.1666 35.45 24.4333 35.9833 25.2833 35.8333C31.8999 33.6 36.6666 27.3667 36.6666 20C36.6666 17.8113 36.2355 15.644 35.3979 13.622C34.5603 11.5999 33.3327 9.76254 31.785 8.2149C30.2374 6.66725 28.4001 5.4396 26.378 4.60202C24.3559 3.76444 22.1886 3.33334 19.9999 3.33334Z"
+                fill="currentColor"
+              />
+            </svg>
           </a>
           <a href="mailto:ivan.perovic@pm.me" aria-label="mail" target="_blank">
-            <img
-              src="assets/material-symbols_mail-outline.svg"
-              alt="mail-logo"
-            />
+            <svg
+              width="44"
+              height="44"
+              viewBox="0 0 44 44"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M7.33341 36.6667C6.32508 36.6667 5.46219 36.308 4.74475 35.5905C4.0273 34.8731 3.66797 34.0096 3.66675 33V11C3.66675 9.99168 4.02608 9.12879 4.74475 8.41134C5.46341 7.6939 6.3263 7.33457 7.33341 7.33334H36.6667C37.6751 7.33334 38.5386 7.69268 39.2572 8.41134C39.9759 9.13001 40.3346 9.9929 40.3334 11V33C40.3334 34.0083 39.9747 34.8718 39.2572 35.5905C38.5398 36.3092 37.6763 36.6679 36.6667 36.6667H7.33341ZM22.0001 23.8333L7.33341 14.6667V33H36.6667V14.6667L22.0001 23.8333ZM22.0001 20.1667L36.6667 11H7.33341L22.0001 20.1667ZM7.33341 14.6667V11V33V14.6667Z"
+                fill="currentColor"
+              />
+            </svg>
           </a>
         </div>
       </header>
@@ -43,11 +67,6 @@
           <label for="skills" class="section-title"
             ><div class="section-title-container">
               <span>SKILLS</span>
-              <!-- <img
-                class="arrow"
-                src="assets/mingcute_down-fill.svg"
-                alt="arrow"
-              /></div -->
               <div class="section-circle"></div>
             </div>
           </label>
@@ -82,11 +101,6 @@
           <label for="projects" class="section-title">
             <div class="section-title-container">
               <span>PROJECTS</span>
-              <!-- <img
-                src="assets/mingcute_down-fill.svg"
-                alt="arrow"
-                class="arrow"
-              /> -->
               <div class="section-circle"></div>
             </div>
           </label>
@@ -94,7 +108,7 @@
           <div class="section-content column">
             <div class="project-box">
               <h4 class="heading-small project">
-                Polls
+                POLLS
                 <span class="heading-small--regular">
                   REST JSON API and React frontend</span
                 >
@@ -109,7 +123,13 @@
                 A public JSON REST API that lets you create, view, edit, delete
                 and vote on polls. It implements IP based voting limitation.
                 Deployed to an AWS EC2 instance. I also made a React frontend.
-                You can try it out at <a href="https://polls.ovh">polls.ovh</a>
+                You can try it out at
+                <a
+                  href="https://polls.ovh"
+                  target="_blank"
+                  class="deployed-site"
+                  >polls.ovh</a
+                >
               </p>
               <ul class="project-stack">
                 <li>Backend: Go, Postgres, Docker, Caddy, AWS EC2</li>
@@ -118,7 +138,7 @@
             </div>
             <div class="project-box">
               <h4 class="heading-small project">
-                Watchlist
+                WATCHLIST
                 <span class="heading-small--regular"> MERN stack web app</span>
               </h4>
               <a
@@ -131,7 +151,10 @@
                 A full stack app where users can discover movies, add them to
                 their list, mark as watched, rate. Backend deployed on Render,
                 Frontend on Netlify:
-                <a href="https://vvatchlist.netlify.app/"
+                <a
+                  href="https://vvatchlist.netlify.app/"
+                  target="_blank"
+                  class="deployed-site"
                   >vvatchlist.netlify.app</a
                 >
               </p>
@@ -142,7 +165,7 @@
             </div>
             <div class="project-box">
               <h4 class="heading-small project">
-                Food and wine pairing
+                FOOD AND WINE PAIRING
                 <span class="heading-small--regular"> React app</span>
               </h4>
               <a
@@ -154,7 +177,10 @@
               <p class="project-text">
                 A single page app that helps users find food and wine pairings.
                 Site url:
-                <a href="https://food-and-wine.netlify.app/"
+                <a
+                  href="https://food-and-wine.netlify.app/"
+                  target="_blank"
+                  class="deployed-site"
                   >food-and-wine.netlify.app</a
                 >
               </p>
